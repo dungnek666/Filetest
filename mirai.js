@@ -6,7 +6,7 @@ const { readdirSync, readFileSync, writeFileSync, existsSync, unlinkSync, rm } =
 const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const logger = require("./utils/log.js");
-const login = require("fca-horizon-remastered");
+const login = require("fca-dongdev2006");
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
@@ -231,7 +231,7 @@ function onBot({ models: botModel }) {
                                     if (!check || isError) throw global.getText('mirai', 'cantInstallPackage', reqDependencies, module.config.name, isError);
                                 }
                             }
-                            logger.loader(global.getText('mirai', 'loadedPackage', module.config.name));
+                            //logger.loader(global.getText('mirai', 'loadedPackage', module.config.name));
                         }
                         if (module.config.envConfig) try {
                             for (const envConfig in module.config.envConfig) {
@@ -241,7 +241,7 @@ function onBot({ models: botModel }) {
                                 else global.configModule[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
                                 if (typeof global.config[module.config.name][envConfig] == 'undefined') global.config[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
                             }
-                            logger.loader(global.getText('mirai', 'loadedConfig', module.config.name));
+                            //logger.loader(global.getText('mirai', 'loadedConfig', module.config.name));
                         } catch (error) {
                             throw new Error(global.getText('mirai', 'loadedConfig', module.config.name, JSON.stringify(error)));
                         }
@@ -257,9 +257,9 @@ function onBot({ models: botModel }) {
                         }
                         if (module.handleEvent) global.client.eventRegistered.push(module.config.name);
                         global.client.commands.set(module.config.name, module);
-                        logger.loader(global.getText('mirai', 'successLoadModule', module.config.name));
+                        //logger.loader(global.getText('mirai', 'successLoadModule', module.config.name));
                     } catch (error) {
-                        logger.loader(global.getText('mirai', 'failLoadModule', module.config.name, error), 'error');
+                        //logger.loader(global.getText('mirai', 'failLoadModule', module.config.name, error), 'error');
                     };
                 }
             }(),
@@ -281,7 +281,7 @@ function onBot({ models: botModel }) {
                                 } catch {
                                     let check = false;
                                     let isError;
-                                    logger.loader(global.getText('mirai', 'notFoundPackage', dependency, event.config.name), 'warn');
+                                    //logger.loader(global.getText('mirai', 'notFoundPackage', dependency, event.config.name), 'warn');
                                     execSync('npm --package-lock false --save install' + dependency + (event.config.dependencies[dependency] == '*' || event.config.dependencies[dependency] == '' ? '' : '@' + event.config.dependencies[dependency]), { 'stdio': 'inherit', 'env': process['env'], 'shell': true, 'cwd': join(__dirname, 'nodemodules') });
                                     for (let i = 1; i <= 3; i++) {
                                         try {
@@ -297,7 +297,7 @@ function onBot({ models: botModel }) {
                                     if (!check || isError) throw global.getText('mirai', 'cantInstallPackage', dependency, event.config.name);
                                 }
                             }
-                            logger.loader(global.getText('mirai', 'loadedPackage', event.config.name));
+                            //logger.loader(global.getText('mirai', 'loadedPackage', event.config.name));
                         }
                         if (event.config.envConfig) try {
                             for (const _0x5beea0 in event.config.envConfig) {
@@ -307,19 +307,19 @@ function onBot({ models: botModel }) {
                                 else global.configModule[event.config.name][_0x5beea0] = event.config.envConfig[_0x5beea0] || '';
                                 if (typeof global.config[event.config.name][_0x5beea0] == 'undefined') global.config[event.config.name][_0x5beea0] = event.config.envConfig[_0x5beea0] || '';
                             }
-                            logger.loader(global.getText('mirai', 'loadedConfig', event.config.name));
+                            //logger.loader(global.getText('mirai', 'loadedConfig', event.config.name));
                         } catch (error) {
-                            throw new Error(global.getText('mirai', 'loadedConfig', event.config.name, JSON.stringify(error)));
+                            throw new //Error(global.getText('mirai', 'loadedConfig', event.config.name, JSON.stringify(error)));
                         }
                         if (event.onLoad) try {
                             const eventData = {};
                             eventData.api = loginApiData, eventData.models = botModel;
                             event.onLoad(eventData);
                         } catch (error) {
-                            throw new Error(global.getText('mirai', 'cantOnload', event.config.name, JSON.stringify(error)), 'error');
+                            throw new //Error(global.getText('mirai', 'cantOnload', event.config.name, JSON.stringify(error)), 'error');
                         }
                         global.client.events.set(event.config.name, event);
-                        logger.loader(global.getText('mirai', 'successLoadModule', event.config.name));
+                        //logger.loader(global.getText('mirai', 'successLoadModule', event.config.name));
                     } catch (error) {
                         logger.loader(global.getText('mirai', 'failLoadModule', event.config.name, error), 'error');
                     }
@@ -375,7 +375,13 @@ function onBot({ models: botModel }) {
 //////////======BIGTEXT 7 MÀU======//////////
 /////////////////////////////////////////////
 
-  const chalkAnimation = require('chalkercli'); chalkAnimation.rainbow('\n██████╗░░█████╗░██╗░░██╗\n██╔══██╗██╔══██╗██║░██╔╝\n██████╦╝██║░░██║█████═╝░\n██╔══██╗██║░░██║██╔═██╗░\n██████╦╝╚█████╔╝██║░╚██╗\n╚═════╝░░╚════╝░╚═╝░░╚═╝');
+  const chalkAnimation = require('chalkercli'); chalkAnimation.rainbow(`\n
+███╗░░░███╗██╗██████╗░░█████╗░██╗██╗░░░██╗██████╗░
+████╗░████║██║██╔══██╗██╔══██╗██║██║░░░██║╚════██╗
+██╔████╔██║██║██████╔╝███████║██║╚██╗░██╔╝░░███╔═╝
+██║╚██╔╝██║██║██╔══██╗██╔══██║██║░╚████╔╝░██╔══╝░░
+██║░╚═╝░██║██║██║░░██║██║░░██║██║░░╚██╔╝░░███████╗
+╚═╝░░░░░╚═╝╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░╚═╝░░░╚══════╝\n`);
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
