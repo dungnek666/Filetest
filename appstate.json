@@ -1,2 +1,74 @@
-Vào fb lấy app nha
-Cao Chung Đạt
+[
+    {
+        "key": "dbln",
+        "value": "%7B%2261558004241054%22%3A%22D1TR4VYL%22%2C%22100082164737826%22%3A%22ovsCvV24%22%2C%2261555939825620%22%3A%2219EKqPN8%22%2C%22100089556416626%22%3A%22H8mh8f0W%22%7D",
+        "domain": "facebook.com",
+        "path": "/login/device-based/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.163Z",
+        "lastAccessed": "2024-04-04T16:42:42.173Z"
+    },
+    {
+        "key": "sb",
+        "value": "5H4DZkLM9StTROHIGRlwwylz",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.173Z",
+        "lastAccessed": "2024-04-04T16:42:42.173Z"
+    },
+    {
+        "key": "datr",
+        "value": "26gOZv9warnBViL1i3eKoxNO",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.173Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    },
+    {
+        "key": "locale",
+        "value": "vi_VN",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.174Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    },
+    {
+        "key": "c_user",
+        "value": "61556421717220",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.174Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    },
+    {
+        "key": "xs",
+        "value": "3%3AAM0c126pkpU7rQ%3A2%3A1712237344%3A-1%3A6274",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.174Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    },
+    {
+        "key": "fr",
+        "value": "0cY25KNuTyw9JdZWz.AWWoWrM5a5CxOm6Vu_mJgZSsWlw.BmDqm1..AAA.0.0.BmDqsg.AWWczg_0Ysw",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.174Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    },
+    {
+        "key": "m_page_voice",
+        "value": "61556421717220",
+        "domain": "facebook.com",
+        "path": "/",
+        "hostOnly": false,
+        "creation": "2024-04-04T16:42:42.174Z",
+        "lastAccessed": "2024-04-04T16:42:42.174Z"
+    }
+      ]
